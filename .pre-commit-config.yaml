@@ -1,8 +1,7 @@
-# .pre-commit-config.yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v5.0.0 # Utilise une version stable récente
+    rev: v4.6.0 # ou la version que tu utilises
     hooks:
       - id: trailing-whitespace
+        args: [--no-markdown-linebreak-ext] # Un argument possible, mais peut ne pas cibler le problème
       - id: end-of-file-fixer
-      # Tu peux ajouter d'autres hooks de ce dépôt ici si besoin
