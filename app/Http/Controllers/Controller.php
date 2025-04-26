@@ -3,62 +3,10 @@
 abstract class controller
 {
     // Ajout d'un espace inutile à la fin de cette ligne
-    // Ce commentaire est trop long et n'apporte rien de pertinent, il devrait être supprimé ou raccourci
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-ssss
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // Ce commentaire est trop long et n'apporte rien de pertinent, il devrait être supprimé ou racco
+knsdn;,dqn;s,qn;,n
     public function exampleMethod
-    {
+    {,
         // Erreur : pas de type de retour défini pour la méthode
         $var = 'test';
     }

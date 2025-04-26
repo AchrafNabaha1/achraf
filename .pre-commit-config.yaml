@@ -1,7 +1,16 @@
+# .pre-commit-config.yaml
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0 # ou la version que tu utilises
+    rev: v4.6.0 # ou ta version
     hooks:
       - id: trailing-whitespace
-        args: [--no-markdown-linebreak-ext] # Un argument possible, mais peut ne pas cibler le problème
       - id: end-of-file-fixer
+  # AJOUTE CETTE PARTIE pour la syntaxe PHP
+  - repo: local # On utilise une commande locale (php)
+    hooks:
+      - id: php-lint
+        name: PHP Lint Check
+        entry: php -l # La commande à exécuter
+        language: system # Dit à pre-commit d'utiliser le 'php' de ton système
+        types: [php] # Ne l'exécute que sur les fichiers .php
+        pass_filenames: true # Passe les noms de fichiers à la commande
