@@ -18,6 +18,22 @@ abstract class controller
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     public function exampleMethod
     {
         // Erreur : pas de type de retour défini pour la méthode
