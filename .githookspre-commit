@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Vérifier que tout fichier PHP a une bonne syntaxe
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.php$')
+
+for FILE in $FILES
+do
+    php -l "$FILE"
+    if [ $? != 0 ]; then
+        echo "Erreur de syntaxe dans $FILE. Corrige avant de commit."
+        exit 1
+    fi
+done
+
+# Si tout est bon
+exit 0
